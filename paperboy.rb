@@ -14,7 +14,7 @@ class PaperBoy
   end
 
   def deliver(start_address, end_address)
-    papers = (end_address - start_address)
+    papers = ((end_address - start_address)+1)
     @earnings += (papers * 0.25).to_f + (0.25 * (papers - quota_calc)).to_f
     @experience += papers
     return
